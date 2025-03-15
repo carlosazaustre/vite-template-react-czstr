@@ -72,6 +72,10 @@ Using Husky, the following Git hooks are configured:
 
 - pre-commit: Runs ESLint and Prettier
 
+## 💝 Sponsoring
+
+If you find this template useful, please consider [sponsoring my work](https://github.com/sponsors/carlosazaustre).
+
 ## 📝 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
