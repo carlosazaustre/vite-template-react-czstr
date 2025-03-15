@@ -1,54 +1,87 @@
-# React + TypeScript + Vite
+# Vite + React v19 + TypeScript Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A template to kickstart modern React projects with the latest technologies and best practices.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡️ [Vite](https://vitejs.dev/) - Ultra-fast build tool
+- ⚛️ [React 19](https://react.dev/) - Latest React version with new features
+- 📝 [TypeScript](https://www.typescriptlang.org/) - Static typing for JavaScript
+- 🛣️ [React Router](https://reactrouter.com/) - Routing for React
+- 💅 [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- 📏 [ESLint](https://eslint.org/) - Linter for JavaScript and TypeScript
+- 💖 [Prettier](https://prettier.io/) - Code formatter
+- ✅ Testing Suite:
+  - [Vitest](https://vitest.dev/) - Unit Testing
+  - [Testing Library](https://testing-library.com/) - Component Testing
+  - [Playwright](https://playwright.dev/) - E2E Testing
+- 🔄 CI/CD:
+  - [GitHub Actions](https://github.com/features/actions) - Automated workflows
+  - [Husky](https://typicode.github.io/husky/) - Git hooks made easy
 
-## Expanding the ESLint configuration
+## 🛠️ Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js 20+
+- npm
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Installation
+
+```bash
+npx degit carlosazaustre/vite-template-react-czstr my-react-app
+cd my-react-app
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run dev        # Start development server
+npm run build      # Build for production
+npm run preview    # Preview production build
+npm run test      # Run unit tests
+npm run test:e2e  # Run end-to-end tests
+npm run lint      # Run linter
 ```
+
+## ⚙️ Configuration
+
+The project includes configuration for:
+
+- TypeScript (`tsconfig.json`)
+- ESLint (`.eslintrc.cjs`)
+- Prettier (`.prettierrc`)
+- Vite (`vite.config.ts`)
+- Tailwind CSS (`tailwind.config.js`)
+- Vitest (`vitest.config.ts`)
+- Playwright (`playwright.config.ts`)
+- GitHub Actions (`.github/workflows/ci.yml`)
+- Husky (`.husky/`)
+
+## 🔄 Continuous Integration
+
+This template includes GitHub Actions workflows that automatically run on push to main and pull requests:
+
+- Runs unit tests with Vitest
+- Runs component tests with Testing Library
+- Runs E2E tests with Playwright in headless mode
+- Ensures code style with ESLint and Prettier
+
+## 🪝 Git Hooks
+
+Using Husky, the following Git hooks are configured:
+
+- pre-commit: Runs ESLint and Prettier
+
+## 📝 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+Contributions are welcome. Please open an issue or submit a pull request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
