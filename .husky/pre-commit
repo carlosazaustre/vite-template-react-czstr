@@ -1,1 +1,2 @@
+echo "runnning eslint..."
 npx lint-staged

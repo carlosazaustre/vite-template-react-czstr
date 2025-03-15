@@ -18,6 +18,15 @@ export default tseslint.config(
       globals: {
         ...globals.browser,
         React: 'readonly',
+        // Testing globals
+        describe: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        test: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
       },
       parser: tseslint.parser,
       parserOptions: {
